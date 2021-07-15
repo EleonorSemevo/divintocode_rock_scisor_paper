@@ -2,13 +2,15 @@ class Player
     def hand
         puts "Veillez saisir un nombre."
         puts "0:pierre , 1:papier , 2:ciseaux"
-        input_hand = gets.to_i
+        input_hand = gets.chomp.to_s
 
         while true 
-            if input_hand!= 0 && input_hand!=1 && input_hand!=2
+            if input_hand!= '0' && input_hand!='1' && input_hand!='2'
                 puts "Veillez saisir un nombre entre 0 et 2."
+                input_hand = gets.chomp.to_s
+                
             else
-                return input_hand
+                return input_hand.to_i
             end
         end
     end
@@ -31,17 +33,18 @@ class Janken
         result = (player_hand - enemy_hand +3)%3
         if result ==2 
             puts "Vous gagnez"
-            return true
+            
         elsif result==1
             puts "Aiko"
-            return true
+            
         elsif result==0
             puts "Vous êtes en train de perdre"
-            return false
+            
         end
-        
+        return true
         
     end
+    
 
 end
 

@@ -32,7 +32,7 @@ class Janken
     def pon(player_hand, enemy_hand)
         janken =  ["goo", "choki", "par"]
         
-        puts "The other hand is #{janken[enemy_hand]} "
+        puts "The other party's hand is #{janken[enemy_hand]} "
         puts
 
         result = (player_hand - enemy_hand +3)%3

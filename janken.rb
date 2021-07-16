@@ -37,7 +37,10 @@ class Janken
         elsif result==1
             puts "Aiko"
             
-        
+        elsif result==0
+            puts "Vous êtes en train de perdre"
+            
+        end
         return true
         
     end

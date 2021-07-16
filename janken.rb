@@ -1,14 +1,15 @@
 class Player
     def hand
-        puts "Veillez saisir un nombre."
-        puts "0:pierre , 1:papier , 2:ciseaux"
-        input_hand = gets.chomp.to_s
-
+        
         while true 
+            puts "Veillez saisir un nombre."
+            puts "0:Goo" 
+            puts "1:Choki" 
+            puts  "2:Par"
+
+            input_hand = gets.chomp.to_s
             if input_hand!= '0' && input_hand!='1' && input_hand!='2'
-                puts "Veillez saisir un nombre entre 0 et 2."
-                input_hand = gets.chomp.to_s
-                
+                puts "PLease input numbers between 0-2."
             else
                 return input_hand.to_i
             end
@@ -26,7 +27,7 @@ end
 class Janken
 
     def pon(player_hand, enemy_hand)
-        janken = ["pierre","papier","ciseaux"]
+        janken =  ["goo", "choki", "par"]
         
         puts "La main de l'autre partie est #{janken[enemy_hand]} "
 
